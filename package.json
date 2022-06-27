@@ -1,0 +1,29 @@
+{
+  "name": "moleculer-compressed-stream-test",
+  "version": "1.0.0",
+  "description": "My Moleculer-based microservice",
+  "scripts": {
+    "dev1": "moleculer-runner --repl --hot service1.service.js",
+    "dev2": "moleculer-runner --repl --hot service2.service.js",
+    "ci": "jest --watch",
+    "test": "jest --coverage"
+  },
+  "keywords": [
+    "microservices",
+    "moleculer"
+  ],
+  "author": "",
+  "devDependencies": {
+    "jest": "^25.1.0",
+    "jest-cli": "^25.1.0",
+    "moleculer-repl": "^0.6.2"
+  },
+  "dependencies": {
+    "memorystream": "^0.3.1",
+    "moleculer": "^0.14.0",
+    "nats": "^1.3.2"
+  },
+  "engines": {
+    "node": ">= 10.x.x"
+  }
+}
