@@ -1,0 +1,23 @@
+{
+	"compilerOptions": {
+		"experimentalDecorators": true,
+		"esModuleInterop": true,
+		"noImplicitAny": false,
+		"module": "commonjs",
+		"moduleResolution": "node",
+		"pretty": true,
+		"types": [
+			"jest",
+			"node"
+		],
+		"sourceMap": true,
+		"target": "es6",
+		"outDir": "build"
+	},
+	"include": [
+		"services/**/*"
+	],
+	"exclude": [
+		"node_modules"
+	]
+}
