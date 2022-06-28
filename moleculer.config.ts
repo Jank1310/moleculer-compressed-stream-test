@@ -183,53 +183,6 @@ const brokerConfig: BrokerOptions = {
 		//@ts-expect-error wrong types
 		Moleculer.Middlewares.Transmit.Compression("gzip"),
 	],
-	// errorHandler(err, info) {
-	// 	this.logger.error(err);
-	// 	Sentry.withScope((scope) => {
-	// 		if (info.service) {
-	// 			const service = info.service as Moleculer.Service;
-	// 			scope.setTag("service", service.name);
-	// 		}
-	// 		if (info.action) {
-	// 			const action = info.action as ActionSchema;
-	// 			scope.setTag("actionName", action.name);
-	// 			scope.setTag("actionRawName", action.rawName);
-	// 		}
-	// 		if (info.ctx) {
-	// 			const ctx = info.ctx as Context;
-	// 			scope.setTag("requestID", ctx.requestID);
-	// 			scope.setTag("ctxService", ctx.service?.name);
-	// 			scope.setTag("ctxAction", ctx.action?.name);
-	// 			scope.setTag("ctxEvent", ctx.event?.name);
-	// 			scope.setExtra("params", ctx.params);
-	// 		}
-	// 		const moleculerError = err as Moleculer.Errors.MoleculerError;
-	// 		scope.setExtra("moleculerError", JSON.stringify(moleculerError));
-	// 		Sentry.captureException(err);
-	// 	});
-	// 	throw err;
-	// },
-	// started(broker: Moleculer.ServiceBroker) {
-	// 	const release = process.env.BUILD_VERSION
-	// 		? `${process.env.NAMESPACE || "local-development"}@${
-	// 				process.env.BUILD_VERSION
-	// 		  }`
-	// 		: "no_release";
-	// 	broker.logger.info(
-	// 		"Sentry sourcemap path:",
-	// 		__dirname || process.cwd()
-	// 	);
-	// 	Sentry.init({
-	// 		dsn: process.env.SENTRY_DSN,
-	// 		environment: process.env.NAMESPACE || "local-development",
-	// 		release,
-	// 		integrations: [
-	// 			new RewriteFrames({
-	// 				root: __dirname || process.cwd(),
-	// 			}),
-	// 		],
-	// 	});
-	// },
 };
 
 module.exports = brokerConfig;
